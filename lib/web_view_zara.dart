@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
-class WebViewContainer extends StatefulWidget {
-  const WebViewContainer({super.key});
+class WebViewZara extends StatefulWidget {
+  const WebViewZara({super.key});
 
   @override
-  State<WebViewContainer> createState() => _WebViewContainerState();
+  State<WebViewZara> createState() => _WebViewZaraState();
 }
 
-class _WebViewContainerState extends State<WebViewContainer> {
+class _WebViewZaraState extends State<WebViewZara> {
 
   final controller = WebViewController()
   ..setJavaScriptMode(JavaScriptMode.disabled) //disable javascript to minimize attacks - for security
-  ..loadRequest(Uri.parse('https://www.shein.com/'));
+  ..loadRequest(Uri.parse('https://www.zara.com/'));
 
   @override
   Widget build(BuildContext context) {

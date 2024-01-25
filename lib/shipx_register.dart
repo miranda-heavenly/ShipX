@@ -61,7 +61,7 @@ class _ShipXRegisterState extends State<ShipXRegister> {
                   controller: TextEditingController(),
                   decoration: InputDecoration(
                       // prefixIcon: Icon(Icons.phone),
-                      labelText: "Phone numer"),
+                      labelText: "Phone nubmer"),
                 ),
                 TextFormField(
                   controller: TextEditingController(),

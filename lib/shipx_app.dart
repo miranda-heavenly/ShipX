@@ -3,7 +3,10 @@ import 'package:shipx/shipx_home.dart';
 import 'package:shipx/shipx_login.dart';
 import 'package:shipx/shipx_register.dart';
 import 'package:shipx/shipx_splash.dart';
-import 'package:shipx/web_view_container.dart';
+import 'package:shipx/web_view_amazon.dart';
+import 'package:shipx/web_view_asos.dart';
+import 'package:shipx/web_view_shein.dart';
+import 'package:shipx/web_view_zara.dart';
 
 class ShipXApp extends StatelessWidget {
   const ShipXApp({super.key});
@@ -25,7 +28,10 @@ class ShipXApp extends StatelessWidget {
         "/register":(context) => const ShipXRegister(),
         "/home":(context) => const ShipXHome(),
         "/splash":(context) => const ShipXSplash(),
-        "/webviewcontainer":(context) => const WebViewContainer()
+        "/webviewshein":(context) => const WebViewShein(),
+        "/webviewamazon":(context) => const WebViewAmazon(),
+        "/webviewzara":(context) => const WebViewZara(),
+        "/webviewasos":(context) => const WebViewAsos(),
       }
       //  home: const ShipXHome(),
     );
