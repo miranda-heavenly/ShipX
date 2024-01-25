@@ -44,17 +44,22 @@ class ShipXSplash extends StatelessWidget {
               shape: MaterialStatePropertyAll(RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)))
             ),
             ),
-            RichText(
-              text: TextSpan(
-                style: TextStyle(fontFamily: 'poppins', fontSize: 14, color: Colors.grey[700],),
-                children: [
-                  TextSpan(text: "Already have an account? "),
-                  TextSpan(text: "Sign in",
-                  style: TextStyle(fontWeight: FontWeight.bold, color:Color.fromRGBO(249, 75, 24, 1) ),
-                  recognizer: TapGestureRecognizer()
-                  )
-                ]
-              ))
+        
+                 Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text("Already have an account?",  style: TextStyle(fontFamily: 'poppins', fontSize: 14, color: Colors.grey[800], fontWeight: FontWeight.w600),),
+                      TextButton(
+                        onPressed: (){
+                        Navigator.pushNamed(context, '/login');
+                      }, 
+                      child: Text("Sign in", style: TextStyle(
+                        fontWeight: FontWeight.bold, color:Color.fromRGBO(249, 75, 24, 1),  fontFamily: 'poppins', fontSize: 14,))
+                      )
+                    ], 
+                  ),
+                
+              
         
           ],
         ),

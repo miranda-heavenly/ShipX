@@ -12,11 +12,12 @@ class _ShipXHomeState extends State<ShipXHome> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[850],
+      backgroundColor: Color.fromRGBO(249, 75, 24, 1).withAlpha(70),
       appBar: AppBar(
-        leading: Icon(Icons.arrow_back_ios_new_rounded),
-        
-        title: Text("Browse platform", textAlign: TextAlign.center,),
+        centerTitle: true,
+        backgroundColor: Colors.white,
+        title: Text("Browse platform", textAlign: TextAlign.center,
+        style: TextStyle(color: Colors.black, fontWeight: FontWeight.w600, fontSize: 24),),
       ),
       bottomNavigationBar: BottomNavigationBar(
         // currentIndex: _selectedIndex,
@@ -29,7 +30,7 @@ class _ShipXHomeState extends State<ShipXHome> {
             ),
              BottomNavigationBarItem(   
             icon: Icon(Icons.shopping_bag_outlined),
-            label: "Order"
+            label: "Cart"
             ),
              BottomNavigationBarItem(
             icon: Icon(Icons.restore_rounded),
@@ -55,7 +56,7 @@ class _ShipXHomeState extends State<ShipXHome> {
                           child: Image(
                             image: AssetImage('assets/shein logo.png'))
                             ),
-                        Text("Shein", style: TextStyle(color: Colors.white, fontSize: 16, height: 1.5),)
+                        Text("Shein", style: TextStyle(color: Colors.black, fontSize: 16, height: 1.5),)
                       ],
                     ),
                     onTap: (){
@@ -77,7 +78,7 @@ class _ShipXHomeState extends State<ShipXHome> {
                             image: AssetImage('assets/asos logo.png'), ),
                         )
                           ),
-                      Text("Asos", style: TextStyle(color: Colors.white, fontSize: 16),)
+                      Text("Asos", style: TextStyle(color: Colors.black, fontSize: 16),)
 
                     ],
                   ),
@@ -93,7 +94,7 @@ class _ShipXHomeState extends State<ShipXHome> {
                         child: Image(
                           image: AssetImage('assets/amazon logo.png') )
                           ),
-                      Text("Amazon", style: TextStyle(color: Colors.white, fontSize: 16),)
+                      Text("Amazon", style: TextStyle(color: Colors.black, fontSize: 16),)
 
                     ],
                   ),
@@ -111,7 +112,7 @@ class _ShipXHomeState extends State<ShipXHome> {
                             image: AssetImage('assets/zara icon.png'), ),
                         
                           ),
-                      Text("Zara", style: TextStyle(color: Colors.white, fontSize: 16),)
+                      Text("Zara", style: TextStyle(color: Colors.black, fontSize: 16),)
 
                     ],
                   ),

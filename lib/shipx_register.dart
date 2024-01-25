@@ -34,12 +34,13 @@ class _ShipXRegisterState extends State<ShipXRegister> {
                     fontWeight: FontWeight.w700,
                     height: 1.4),
               ),
+              SizedBox(height: 5,),
               Text(
                 "Fill your details to create an account with ShipX and pre-order with confidence and convenience",
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                    fontSize: 12,
-                    color: Colors.black,
+                    fontSize: 14,
+                    color: Colors.grey[800],
                     fontFamily: 'Poppins',
                     fontWeight: FontWeight.w700,
                     height: 1.5),
@@ -142,17 +143,21 @@ class _ShipXRegisterState extends State<ShipXRegister> {
                 )
             ],
           ),
-           RichText(
-              text: TextSpan(
-                style: TextStyle(fontFamily: 'poppins', fontSize: 14, color: Colors.grey[700],),
-                children: [
-                  TextSpan(text: "Already have an account? "),
-                  TextSpan(text: "Sign in",
-                  style: TextStyle(fontWeight: FontWeight.bold, color:Color.fromRGBO(249, 75, 24, 1) ),
-                  recognizer: TapGestureRecognizer()
-                  )
-                ]
-              ))
+          
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text("Already have an account?",  style: TextStyle(fontFamily: 'poppins', fontSize: 14, color: Colors.grey[800], fontWeight: FontWeight.w600),),
+                      TextButton(
+                        onPressed: (){
+                        Navigator.pushNamed(context, '/login');
+                      }, 
+                      child: Text("Sign in", style: TextStyle(
+                        fontWeight: FontWeight.bold, color:Color.fromRGBO(249, 75, 24, 1),  fontFamily: 'poppins', fontSize: 14,))
+                      )
+                    ], 
+                  ),
+                
         ],
       ),
     );

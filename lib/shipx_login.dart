@@ -2,7 +2,7 @@
 
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-// import 'package:url_launcher/url_launcher.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 
 class ShipXLogin extends StatefulWidget {
@@ -36,12 +36,13 @@ class _ShipXLoginState extends State<ShipXLogin> {
                     fontWeight: FontWeight.w700,
                     height: 1.4),
               ),
+              SizedBox(height: 5,),
               Text(
                 "Log in with the information you provided during your registration, and let's get shopping!",
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                    fontSize: 12,
-                    color: Colors.black,
+                    fontSize: 14,
+                    color: Colors.grey[800],
                     fontFamily: 'Poppins',
                     fontWeight: FontWeight.w700,
                     height: 1.5),
@@ -145,18 +146,23 @@ class _ShipXLoginState extends State<ShipXLogin> {
                 )
             ],
           ),
-           RichText(
-              text: TextSpan(
-                style: TextStyle(fontFamily: 'poppins', fontSize: 14, color: Colors.grey[700],),
-                children: [
-                  TextSpan(text: "Don't have an account? "),
-                  TextSpan(text: "Sign up",
-                  style: TextStyle(fontWeight: FontWeight.bold, color:Color.fromRGBO(249, 75, 24, 1) ),
-                  recognizer: TapGestureRecognizer()
-                  // ..onTap = () {launch('/register')}
-                  )
-                ]
-              ))
+          
+           
+                   Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text("Don't have an account?",  style: TextStyle(fontFamily: 'poppins', fontSize: 14, color: Colors.grey[800], fontWeight: FontWeight.w600),),
+                      TextButton(
+                        onPressed: (){
+                        Navigator.pushNamed(context, '/register');
+                      }, 
+                      child: Text("Sign up", style: TextStyle(
+                        fontWeight: FontWeight.bold, color:Color.fromRGBO(249, 75, 24, 1),  fontFamily: 'poppins', fontSize: 14,))
+                      )
+                    ], 
+                  ),
+              
+              
         ],
       ),
     );
