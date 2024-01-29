@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "981223268552",
+    "project_id": "shipx-77cae",
+    "storage_bucket": "shipx-77cae.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:981223268552:android:990308b80f1613dfaf85fd",
+        "android_client_info": {
+          "package_name": "com.example.shipx"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCrpMHMxwRR1luHRDuaYof1JOpx8Pk6jWc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

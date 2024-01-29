@@ -1,9 +1,6 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
-
 
 class ShipXLogin extends StatefulWidget {
   const ShipXLogin({super.key});
@@ -80,7 +77,7 @@ class _ShipXLoginState extends State<ShipXLogin> {
           ),
                   ElevatedButton(
                   onPressed: () {
-                    Navigator.pushNamed(context, '/home');
+                    Navigator.pushReplacementNamed(context, '/home');
                   },
                   child: Text(
                     "Sign in",

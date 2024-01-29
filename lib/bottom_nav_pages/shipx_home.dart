@@ -8,13 +8,27 @@ class ShipXHome extends StatefulWidget {
 }
 
 class _ShipXHomeState extends State<ShipXHome> {
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color.fromRGBO(249, 75, 24, 1).withAlpha(70),
       appBar: AppBar(
-        centerTitle: true,
+        // actions: [
+        //     Padding(
+        //       padding: EdgeInsets.only(right: 30),
+        //       child: IconButton(
+        //         icon: const Icon(Icons.shopping_cart_outlined),
+        //         tooltip: 'Open shopping cart',
+        //         onPressed: () {
+        //           // handle the press
+        //         },
+        //       ),
+        //     ),
+        //   ],
+
         backgroundColor: Colors.white,
+        centerTitle: true,
         title: Text(
           "Browse platform",
           textAlign: TextAlign.center,
@@ -22,18 +36,7 @@ class _ShipXHomeState extends State<ShipXHome> {
               color: Colors.black, fontWeight: FontWeight.w600, fontSize: 24),
         ),
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        // currentIndex: _selectedIndex,
-        selectedItemColor: Color.fromRGBO(249, 75, 24, 1),
-        unselectedItemColor: Colors.black,
-        items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.shopping_bag_outlined), label: "Cart"),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.restore_rounded), label: "History"),
-        ],
-      ),
+ 
       body: Column(
         children: [
           Padding(
