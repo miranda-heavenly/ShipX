@@ -18,7 +18,7 @@ class _WebViewSheinState extends State<WebViewShein> {
   Widget build(BuildContext context) {
     return  Scaffold(
       appBar: AppBar(
-        title: Text("Brows your faves"),
+        title: Text("Browse your faves"),
       ),
       body: WebViewWidget(controller: controller),
     );
