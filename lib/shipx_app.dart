@@ -22,7 +22,7 @@ class ShipXApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      initialRoute: "/splash",
+      initialRoute: "/login",
       routes: <String, WidgetBuilder>{
         "/login":(context) => const ShipXLogin(),
         "/register":(context) => const ShipXRegister(),
