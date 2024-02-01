@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shipx/main_page.dart';
 import 'package:shipx/page_navigation.dart';
 import 'package:shipx/shipx_login.dart';
 import 'package:shipx/shipx_register.dart';
@@ -28,6 +29,7 @@ class ShipXApp extends StatelessWidget {
         "/register":(context) => const ShipXRegister(),
         "/home":(context) => const NavigationPage(),
         "/splash":(context) => const ShipXSplash(),
+        "/main_page":(context) => const MainPage(),
         "/webviewshein":(context) => const WebViewShein(),
         "/webviewamazon":(context) => const WebViewAmazon(),
         "/webviewzara":(context) => const WebViewZara(),

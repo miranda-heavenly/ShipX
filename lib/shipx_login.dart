@@ -1,6 +1,8 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+
 
 class ShipXLogin extends StatefulWidget {
   const ShipXLogin({super.key});
@@ -10,6 +12,24 @@ class ShipXLogin extends StatefulWidget {
 }
 
 class _ShipXLoginState extends State<ShipXLogin> {
+
+    final _emailController = TextEditingController();
+  final _passwordController = TextEditingController();
+
+  Future signIn() async {
+    await FirebaseAuth.instance.signInWithEmailAndPassword(
+      email: _emailController.text.trim(), 
+      password: _passwordController.text.trim()
+      );
+  }
+
+  @override
+  void dispose() {
+    _emailController.dispose();
+  _passwordController.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -51,13 +71,13 @@ class _ShipXLoginState extends State<ShipXLogin> {
                 child: Column(
               children: [
                 TextFormField(
-                  controller: TextEditingController(),
+                  controller: _emailController,
                   decoration: InputDecoration(
                       // prefixIcon: Icon(Icons.email),
                       labelText: "Email or Phone"),
                 ),
                 TextFormField(
-                  controller: TextEditingController(),
+                  controller: _passwordController,
                   obscureText: true,
                   decoration: InputDecoration(
                       // prefixIcon: Icon(Icons.lock),
@@ -77,7 +97,7 @@ class _ShipXLoginState extends State<ShipXLogin> {
           ),
                   ElevatedButton(
                   onPressed: () {
-                    Navigator.pushReplacementNamed(context, '/home');
+                    Navigator.pushNamed(context, '/home');
                   },
                   child: Text(
                     "Sign in",

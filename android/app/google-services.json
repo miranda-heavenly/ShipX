@@ -12,7 +12,12 @@
           "package_name": "com.example.shipx"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "981223268552-vdpgqdglda5i43u6h1jim65its7cgn7i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyCrpMHMxwRR1luHRDuaYof1JOpx8Pk6jWc"
@@ -20,7 +25,12 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "981223268552-vdpgqdglda5i43u6h1jim65its7cgn7i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }
