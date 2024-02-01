@@ -39,7 +39,7 @@ final navigationDelegate = NavigationDelegate(
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Browse Your Faves"),
+        title: Text("Brows your faves"),
       ),
       body: Stack(
         children: [
