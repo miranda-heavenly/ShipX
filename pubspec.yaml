@@ -37,6 +37,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   # webview_flutter: ^3.0.4
   webview_flutter: ^4.4.4
+  # webview_flutter: ^6.0.2
   url_launcher: ^6.2.4
   firebase_auth: ^4.16.0
   timeline_tile: ^2.0.0

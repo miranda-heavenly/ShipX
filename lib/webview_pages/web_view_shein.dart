@@ -16,17 +16,18 @@ class _WebViewSheinState extends State<WebViewShein> {
   List<Map<String, dynamic>> productDetails = [];
 
 final navigationDelegate = NavigationDelegate(
-  onNavigationRequest: (NavigationRequest request) {
-    if (request.url.startsWith('https://www.shein.com/product/')) {
-      // Retrieve the product URL
-      final productUrl = request.url;
-      print("Product URL: $productUrl");
+    onNavigationRequest: (NavigationRequest request) {
+      if (request.url.startsWith('https://www.shein.com/product/')) {
+        // Retrieve the product URL
+        final productUrl = request.url;
+        print("Product URL: $productUrl");
 
-      // ... (handle add to cart logic here)
-    }
-    return NavigationDecision.navigate; // Allow navigation to proceed
-  }
-);
+        // ... (handle add to cart logic here)
+      }
+      return NavigationDecision.navigate; // Allow navigation to proceed
+    },
+  );
+
 
   @override
   void initState() {
@@ -48,8 +49,8 @@ final navigationDelegate = NavigationDelegate(
           // navigationDelegate: navigationDelegate,
           // javascriptMode: JavascriptMode.unrestricted,
           // navigationDelegate: navigationDelegate,
-        
           ),
+          
           if (isAddToCartPopupVisible)
             _buildAddToCartPopup(context),
           Positioned(
